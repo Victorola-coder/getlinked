@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* outline: 1px solid red; */
+}
+
+body {
+  scroll-behavior: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* height: 100vh; */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  /* background-color: #0a1c20; */
+  background-color: #061417;
+  /* background-color: black; */
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  @apply w-0 bg-transparent;
+}
+
+body::-webkit-scrollbar-corner {
+  @apply bg-transparent;
+}
+
+body::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+
+body::-webkit-scrollbar-track-piece {
+  @apply bg-transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply transition-all duration-500 rounded-full bg-black/60 hover:bg-black/40;
+}
+
+html {
+  scrollbar-color: rgb(0, 0, 0, 0.4) rgb(0, 0, 0, 0);
+  scrollbar-width: thin;
+}
+
+@font-face {
+  font-family: clash;
+  src: url("./assets/fonts/clash/ClashDisplay-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: clashBold;
+  src: url("./assets/fonts/clash/ClashDisplay-Semibold.otf") format("opentype");
+}
+
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
