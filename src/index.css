@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   margin: 0;
   padding: 0;
@@ -18,9 +17,7 @@ body {
   /* height: 100vh; */
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  /* background-color: #0a1c20; */
-  background-color: #061417;
-  /* background-color: black; */
+  background-color: #140d27;
   color: white;
   font-family: "Poppins", sans-serif;
 }
@@ -58,7 +55,6 @@ html {
   font-family: clashBold;
   src: url("./assets/fonts/clash/ClashDisplay-Semibold.otf") format("opentype");
 }
-
 
 html.lenis {
   height: auto;

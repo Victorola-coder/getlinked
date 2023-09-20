@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        pop: ["Poppins", "sans-serif"],
+        mon: ["Montserrat", "sans-serif"],
+        inter:["Inter", "sans-serif"],
         clash: ["clash", "sans-serif"],
         clashbold: ["clashBold", "sans-serif"],
       },
@@ -14,6 +15,11 @@ export default {
         lg: "992px",
         xl: "1220px",
         xxl: "1400px",
+      },
+      colors: {
+        "dark-gray": "#150E28",
+        "brand-purple-1": "#D434FE",
+        "navb":"rgba(255, 255, 255, 0.04)"
       },
     },
   },
