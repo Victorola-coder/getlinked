@@ -8,6 +8,7 @@ export default {
         inter: ["Inter", "sans-serif"],
         clash: ["clash", "sans-serif"],
         clashbold: ["clashBold", "sans-serif"],
+        uni: ["Unica One", "cursive"],
       },
       screens: {
         sm: "576px",
