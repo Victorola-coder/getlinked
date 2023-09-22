@@ -15,6 +15,7 @@ export default function Home() {
         <Hero />
         <Intro />
         <Rules />
+        <Judging />
       </main>
     </>
   );
@@ -188,6 +189,74 @@ const Rules = () => {
             className="w- absolute w-[1037px]h-[948px] pointer-events-none top-[20px] right-[-350px] mix-blend-hard-light hidden lg:block"
           />
         </figure>
+      </Atom>
+      <div className="w-full h-[1px] bg-line"></div>
+    </>
+  );
+};
+
+const Judging = () => {
+  return (
+    <>
+      <Atom className={`pb-3 md:p-10`}>
+        <figure className="relative flex items-center">
+          <img
+            src="/images/attributes.svg"
+            alt="Judging Criteria Key attributes"
+            className="relative z-2"
+          />
+          <img
+            src="/images/purple-lens-flare-left.svg"
+            alt="purple lens flare"
+            className="absolute w-[1037px]h-[948px] pointer-events-none top-[-150px] lg:top-[150px] left-[-100px] mix-blend-hard-light  lg:block"
+          />
+        </figure>
+        <div className="mt-12 md:mt-0">
+          <h3 className="text-[20px] mx-auto md:mx-0 leading-[26.6px] text-center max-w-[249px] text-white font-clashbold md:leading-[27px] md:text-[22px] font-semibold lg:text-[32px] md:max-w-[500px] md:text-left lg:max-w-[267px]">
+            Judging Criteria{" "}
+            <span className="text-[#D434FE]">Key attributes</span>
+          </h3>
+          <p className="text-xs mt-2 leading-[27.5px] max-w-[321px] text-center font-normal font-mon text-white md:mt-5 md:leading-[27.5px] md:text-sm md:text-left md:max-w-[533px]">
+            <span className="text-[#FF26B9] font-bold">
+              Innovation and Creativity:
+            </span>{" "}
+            Evaluate the uniqueness and creativity of the solution. Consider
+            whether it addresses a real-world problem in a novel way or
+            introduces innovative features.
+          </p>
+          <p className="text-xs mt-2 leading-[27.5px] max-w-[321px] text-center font-normal font-mon text-white md:mt-5 md:leading-[27.5px] md:text-sm md:text-left md:max-w-[533px]">
+            <span className="text-[#FF26B9] font-bold"> Functionality:</span>{" "}
+            Assess how well the solution works. Does it perform its intended
+            functions effectively and without major issues? Judges would
+            consider the completeness and robustness of the solution.
+          </p>
+          <p className="text-xs mt-2 leading-[27.5px] max-w-[321px] text-center font-normal font-mon text-white md:mt-5 md:leading-[27.5px] md:text-sm md:text-left md:max-w-[533px]">
+            <span className="text-[#FF26B9] font-bold">
+              Impact and Relevance:
+            </span>{" "}
+            Determine the potential impact of the solution in the real world.
+            Does it address a significant problem, and is it relevant to the
+            target audience? Judges would assess the potential social, economic,
+            or environmental benefits.
+          </p>
+          <p className="text-xs mt-2 leading-[27.5px] max-w-[321px] text-center font-normal font-mon text-white md:mt-5 md:leading-[27.5px] md:text-sm md:text-left md:max-w-[533px]">
+            <span className="text-[#FF26B9] font-bold">
+              Technical Complexity:
+            </span>{" "}
+            Evaluate the technical sophistication of the solution. Judges would
+            consider the complexity of the code, the use of advanced
+            technologies or algorithms, and the scalability of the solution.
+          </p>
+          <p className="text-xs mt-2 leading-[27.5px] max-w-[321px] text-center font-normal font-mon text-white md:mt-5 md:leading-[27.5px] md:text-sm md:text-left md:max-w-[533px]">
+            <span className="text-[#FF26B9] font-bold">
+              Adherence to Hackathon Rules:
+            </span>{" "}
+            Judges will Ensure that the team adhered to the rules and guidelines
+            of the hackathon, including deadlines, use of specific technologies
+            or APIs, and any other competition-specific requirements.
+          </p>
+          <Button className="mt-12">Read More</Button>
+        </div>
       </Atom>
       <div className="w-full h-[1px] bg-line"></div>
     </>
