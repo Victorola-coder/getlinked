@@ -74,7 +74,7 @@ const Hero = () => {
                 </span>
               </h1>
             </div>
-            <p className="text-[13px] lg:text-[20px] lg:mb-5 text-white text-center lg:text-left max-w-[264px] lg:max-w-none relative z-2">
+            <p className="text-[13px] lg:text-[20px] lg:mb-5 font-mon text-white text-center lg:text-left max-w-[264px] lg:max-w-none relative z-2">
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize
             </p>
@@ -107,7 +107,7 @@ const Hero = () => {
             <img
               src="/images/man-vr.svg"
               alt="Man - Virtual Reality"
-              className="w-full h-full"
+              className="w-full h-full overflow-hidden px-7"
             />
           </figure>
         </Container>
