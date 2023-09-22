@@ -1,6 +1,7 @@
 import React from "react";
 import SEO from "../../components/seo";
 import { Atom, Button, Container } from "../../components";
+import { Disclosure, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <Intro />
         <Rules />
         <Judging />
+        <Faqs />
       </main>
     </>
   );
@@ -56,6 +58,7 @@ const Hero = () => {
             <img
               src="/images/purple-lens-flare-left.svg"
               alt="purple lens flare"
+              draggable={false}
               className="w-[616px] h-[563px] lg:hidden absolute pointer-events-none top-[-8%] left-[-8%] mix-blend-hard-light"
             />
             <div className="grid place-items-center text-center font-clashbold lg:text-left lg:block text-white text-[32px] lg:text-[80px] font-bold lg:leading-[98px] relative z-2">
@@ -67,11 +70,13 @@ const Hero = () => {
                   <img
                     src="/icons/chain.svg"
                     alt="chain"
+                    draggable={false}
                     className="inline-block mb-2 lg:mb-0 lg:absolute w-[32px] h-[32px] lg:w-auto lg:h-auto top-[5px] left-[120px]"
                   />
                   <img
                     src="/icons/fire.svg"
-                    alt="chain"
+                    alt="fire"
+                    draggable={false}
                     className="inline-block mb-2 lg:mb-0 lg:absolute top-[20px] w-[22px] h-[22px] lg:w-auto lg:h-auto left-[205px]"
                   />
                 </span>
@@ -108,10 +113,16 @@ const Hero = () => {
             </div>
           </header>
           <figure className="relative overflow-y-hidden">
-            <img src="/images/planet.svg" alt="Planet" className="absolute" />
+            <img
+              src="/images/planet.svg"
+              draggable={false}
+              alt="Planet"
+              className="absolute"
+            />
             <img
               src="/images/man-vr.svg"
               alt="Man - Virtual Reality"
+              draggable={false}
               className="w-full h-full overflow-hidden px-7"
             />
           </figure>
@@ -162,6 +173,7 @@ const Rules = () => {
             src="./images/purple-lens-flare-left.svg"
             alt="purple lens flare"
             className="w- absolute w-[1037px] h-[948px] pointer-events-none top-[-420px] left-[20px] mix-blend-hard-light hidden lg:block"
+            draggable={false}
           />
 
           <h3 className="text-[20px] mx-auto md:mx-0 leading-[26.6px] text-center max-w-[249px] text-white font-clashbold md:leading-[27px] md:text-[22px] font-semibold lg:text-[32px] md:max-w-[500px] md:text-left lg:leading-[1] lg:max-w-[170px]">
@@ -182,6 +194,7 @@ const Rules = () => {
             src="./images/rules.svg"
             alt="Rules and Guidelines"
             className="relative z-20"
+            draggable={false}
           />
           <img
             src="./images/purple-lens-flare-left.svg"
@@ -204,6 +217,7 @@ const Judging = () => {
             src="/images/attributes.svg"
             alt="Judging Criteria Key attributes"
             className="relative z-2"
+            draggable={false}
           />
           <img
             src="/images/purple-lens-flare-left.svg"
@@ -260,5 +274,67 @@ const Judging = () => {
       </Atom>
       <div className="w-full h-[1px] bg-line"></div>
     </>
+  );
+};
+
+const Faqs = () => {
+  return (
+    <div className="border-b-[1px] border-[#ffffff2e]">
+      <Container>
+        <div className="flex gap-[24px] pb-14 flex-col lg:flex-row">
+          <div className="w-full lg:max-w-[427px] pt-24">
+            <header className="relative grid text-center text-white pb-14 place-items-center lg:block lg:text-left">
+              <h1 className="relative z-2 text-[32px] font-clashdisplay font-bold">
+                Frequently Ask{" "}
+              </h1>
+              <h1 className="text-primary relative z-2 text-[32px] font-clashdisplay font-bold">
+                Question
+              </h1>
+              <p className="pt-2 text-[14px]">
+                We got answers to the questions that you might want to ask about
+                getlinked Hackathon 1.0
+              </p>
+            </header>
+            <div>
+              {faqsData.map((faq) => (
+                <Disclosure key={faq.id}>
+                  {({ open }) => (
+                    <div className="mb-5">
+                      <Disclosure.Button className="flex w-full justify-between border-b-[1px] border-primary py-2 text-left">
+                        <span className="text-white text-[14px]">
+                          {faq.title}
+                        </span>
+                        <span
+                          className={`material-icons self-end ${
+                            open ? "rotate-180" : "-rotate-180"
+                          } transition text-primary`}
+                        >
+                          {open ? "remove" : "add"}
+                        </span>
+                      </Disclosure.Button>
+                      <Transition
+                        enter="transition duration-100 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <Disclosure.Panel className="text-left px-2 py-2 text-[13px] text-white text-opacity-80">
+                          {faq.content}
+                        </Disclosure.Panel>
+                      </Transition>
+                    </div>
+                  )}
+                </Disclosure>
+              ))}
+            </div>
+          </div>
+          <figure className="flex-1">
+            <img src="/images/faqs.svg" alt="Faqs" />
+          </figure>
+        </div>
+      </Container>
+    </div>
   );
 };
