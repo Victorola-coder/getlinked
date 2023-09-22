@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <Fragment>
       <header
-        className="px-[40px] py-5 lg:py-5 lg:px-[128px] border-bs border-white/20s"
+        className="px-[40px] py-5 lg:py-5 lg:px-[60px] border-bs border-white/20s"
         ref={headerRef}
       >
         <nav className="flex justify-between space-x-5">

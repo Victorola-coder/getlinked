@@ -1,6 +1,6 @@
 import React from "react";
 import SEO from "../../components/seo";
-import { Button, Container } from "../../components";
+import { Atom, Button, Container } from "../../components";
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -13,6 +13,8 @@ export default function Home() {
       />
       <main>
         <Hero />
+        <Intro />
+        <Rules />
       </main>
     </>
   );
@@ -74,12 +76,14 @@ const Hero = () => {
                 </span>
               </h1>
             </div>
-            <p className="text-[13px] lg:text-[20px] lg:mb-5 font-mon text-white text-center lg:text-left max-w-[264px] lg:max-w-none relative z-2">
+            <p className="text-[13px] lg:text-[20px] lg:mb-5 font-mon text-white text-center lg:text-left max-w-[264px] lg:max-w-[522px] relative z-2">
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize
             </p>
             <Link to="/register" className="relative z-2">
-              <Button>Register</Button>
+              <Button className="text-base font-normal leading-normal font-mon">
+                Register
+              </Button>
             </Link>
             <div className="relative flex gap-4 pt-5 text-white lg:gap-6 z-2">
               <div className="flex">
@@ -116,73 +120,76 @@ const Hero = () => {
   );
 };
 
-// const Hero = () => {
-//   return (
-//     <section className="fle">
-//       <div className="flex items-center ml-10 mr-[55px] mt-[32px]">
-//
-//         <Container className="!px-4 flex justify-center lg:justify-end relative">
-//           <img
-//             src="./images/purple-lens-flare-left.svg"
-//             alt="purple lens flare"
-//             className="hidden lg:block absolute pointer-events-none lg:top-[-300px] lg:left-[-100px] mix-blend-hard-light"
-//           />
-//           <figure>
-//             <img
-//               src="./images/purple-lens-flare-left.svg"
-//               alt="purple lens flare"
-//               className="hidden lg:block absolute pointer-events-none top-[-100px] left-[600px] mix-blend-hard-light"
-//             />
-//           </figure>
-//           <h1 className="font-bold italic font-mon py-6 lg:text-[36px] text-white relative z-2 text-center lg:text-right">
-//             Igniting a Revolution in{" "}
-//             <span className="relative">
-//               HR Innovation{" "}
-//               <img
-//                 src="/images/curved-line.svg"
-//                 className="bottom-[-10px] lg:bottom-[-15px] left-[2px] absolute"
-//               />
-//             </span>
-//           </h1>
-//         </Container>
-//       </div>
-//       <div>
-//         <Container>
-//           <img
-//             src="./images/purple-lens-flare-left.svg"
-//             alt="purple lens flare"
-//             className="w-[616px] h-[563px] lg:hidden absolute pointer-events-none top-[-8%] left-[-8%] mix-blend-hard-light"
-//           />
+const Intro = () => {
+  return (
+    <>
+      <Container className="mt-[30px] px-[77px] flex flex-col items-center justify-between md:mt-[90px] lg:mt-[193px] pb-4 md:pb-10 md:space-x-[50px] lg:space-x-[100px] md:flex md:flex-row md:justify-center">
+        <figure>
+          <img
+            src="./images/bigidea.svg"
+            alt="idea💡"
+            className="object-cover"
+            draggable={false}
+          />
+        </figure>
+        <div className="mt-12 md:mt-0">
+          <h3 className="text-[20px] mx-auto md:mx-0 leading-[26.6px] text-center max-w-[249px] text-white font-clashbold md:leading-[27px] md:text-[22px] font-semibold lg:text-[32px] md:max-w-[500px] md:text-left lg:max-w-[398px]">
+            Introduction to getlinked{" "}
+            <span className="text-[#D434FE]">tech Hackathon 1.0</span>
+          </h3>
+          <p className="text-xs mt-2 leading-[27.5px] max-w-[321px] text-center font-normal font-mon text-white md:mt-4 md:leading-[27.5px] md:text-sm md:text-left md:max-w-[535px]">
+            Our tech hackathon is a melting pot of visionaries, and its purpose
+            is as clear as day: to shape the future. Whether you're a coding
+            genius, a design maverick, or a concept wizard, you'll have the
+            chance to transform your ideas into reality. Solving real-world
+            problems, pushing the boundaries of technology, and creating
+            solutions that can change the world, that's what we're all about!
+          </p>
+        </div>
+      </Container>
+      <div className="w-full h-[1px] bg-line"></div>
+    </>
+  );
+};
 
-//           <h1 className="text-white font-clashbold md:text-[80px] font-semibold leading-none max-w-[597px] relatives z-20s">
-//             getlinked Tech Hackathon&nbsp;
-//             <span className="text-[#D434FE] relative inline-block text-primary">
-//               1.0
-//               <img
-//                 src="./icons/chain.svg"
-//                 alt="chain"
-//                 draggable={false}
-//                 className="inline-block mb-2 lg:mb-0 lg:absolute w-[32px] h-[32px] lg:w-auto lg:h-auto top-[5px] left-[120px]"
-//               />
-//               <img
-//                 src="./icons/fire.svg"
-//                 draggable={false}
-//                 alt="chain"
-//                 className="inline-block mb-2 lg:mb-0 lg:absolute top-[20px] w-[22px] h-[22px] lg:w-auto lg:h-auto left-[205px]"
-//               />
-//             </span>
-//           </h1>
-//           <p className="md:mt-[8px] md:text-[20px] font-normal md:leading-[33px] font-mon text-white md:max-w-[522px] ">
-//             Participate in getlinked tech Hackathon 2023 stand a chance to win a
-//             Big prize
-//           </p>
-//           <Link to="/register" className="relatives z-2s">
-//             <Button className="text-base leading-normal text-white font-mon mt-[41px]">
-//               Register
-//             </Button>
-//           </Link>
-//         </Container>
-//       </div>
-//     </section>
-//   );
-// };
+const Rules = () => {
+  return (
+    <>
+      <Atom className="flex-col-reverse mt-0">
+        <div className="relative mt-12 md:mt-0">
+          <img
+            src="./images/purple-lens-flare-left.svg"
+            alt="purple lens flare"
+            className="w- absolute w-[1037px] h-[948px] pointer-events-none top-[-420px] left-[20px] mix-blend-hard-light hidden lg:block"
+          />
+
+          <h3 className="text-[20px] mx-auto md:mx-0 leading-[26.6px] text-center max-w-[249px] text-white font-clashbold md:leading-[27px] md:text-[22px] font-semibold lg:text-[32px] md:max-w-[500px] md:text-left lg:leading-[1] lg:max-w-[170px]">
+            Rules and {""}
+            <span className="text-[#D434FE]">Guildlines</span>
+          </h3>
+          <p className="text-xs mt-2 leading-[27.5px] max-w-[321px] text-center font-normal font-mon text-white md:mt-4 md:leading-[27.5px] md:text-sm md:text-left md:max-w-[535px]">
+            Our tech hackathon is a melting pot of visionaries, and its purpose
+            is as clear as day: to shape the future. Whether you're a coding
+            genius, a design maverick, or a concept wizard, you'll have the
+            chance to transform your ideas into reality. Solving real-world
+            problems, pushing the boundaries of technology, and creating
+            solutions that can change the world, that's what we're all about!
+          </p>
+        </div>
+        <figure className="relative">
+          <img
+            src="./images/rules.svg"
+            alt="Rules and Guidelines"
+            className="relative z-20"
+          />
+          <img
+            src="./images/purple-lens-flare-left.svg"
+            alt="purple lens flare"
+            className="w- absolute w-[1037px]h-[948px] pointer-events-none top-[20px] right-[-350px] mix-blend-hard-light hidden lg:block"
+          />
+        </figure>
+      </Atom>
+      <div className="w-full h-[1px] bg-line"></div>
+    </>
+  );
+};
