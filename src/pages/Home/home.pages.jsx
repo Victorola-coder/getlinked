@@ -3,6 +3,7 @@ import SEO from "../../components/seo";
 import { Atom, Button, Container } from "../../components";
 import { Disclosure, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
+import { faqsData } from "../../data/data";
 
 export default function Home() {
   return (
@@ -65,7 +66,7 @@ const Hero = () => {
               <h1>getlinked Tech</h1>
               <h1>
                 Hackathon&nbsp;
-                <span className="relative text-[#D434FE] inline-block text-primary">
+                <span className="relative text-[#D434FE] inline-block text-[#D434FE]">
                   1.0
                   <img
                     src="/icons/chain.svg"
@@ -279,18 +280,15 @@ const Judging = () => {
 
 const Faqs = () => {
   return (
-    <div className="border-b-[1px] border-[#ffffff2e]">
-      <Container>
+    <>
+      <Atom>
         <div className="flex gap-[24px] pb-14 flex-col lg:flex-row">
           <div className="w-full lg:max-w-[427px] pt-24">
-            <header className="relative grid text-center text-white pb-14 place-items-center lg:block lg:text-left">
-              <h1 className="relative z-2 text-[32px] font-clashdisplay font-bold">
-                Frequently Ask{" "}
+            <header className="relative grid text-center text-white pb-14 lg:block lg:text-left">
+              <h1 className="relative z-2 text-[32px] font-clashbold font-bold">
+                Frequently Ask <span className="text-[#D434FE]">Question</span>
               </h1>
-              <h1 className="text-primary relative z-2 text-[32px] font-clashdisplay font-bold">
-                Question
-              </h1>
-              <p className="pt-2 text-[14px]">
+              <p className="pt-2 font-mon leading-[27.5px] max-w-[342px] text-[14px]">
                 We got answers to the questions that you might want to ask about
                 getlinked Hackathon 1.0
               </p>
@@ -300,14 +298,14 @@ const Faqs = () => {
                 <Disclosure key={faq.id}>
                   {({ open }) => (
                     <div className="mb-5">
-                      <Disclosure.Button className="flex w-full justify-between border-b-[1px] border-primary py-2 text-left">
-                        <span className="text-white text-[14px]">
+                      <Disclosure.Button className="flex w-full  justify-between border-b-[1px] border-[#D434FE] py-2 text-left">
+                        <span className="text-white font-mon leading-[27.5px] max-w-[390px] text-[14px]">
                           {faq.title}
                         </span>
                         <span
                           className={`material-icons self-end ${
                             open ? "rotate-180" : "-rotate-180"
-                          } transition text-primary`}
+                          } transition text-[#D434FE]`}
                         >
                           {open ? "remove" : "add"}
                         </span>
@@ -320,7 +318,7 @@ const Faqs = () => {
                         leaveFrom="transform scale-100 opacity-100"
                         leaveTo="transform scale-95 opacity-0"
                       >
-                        <Disclosure.Panel className="text-left px-2 py-2 text-[13px] text-white text-opacity-80">
+                        <Disclosure.Panel className="text-left px-2 py-2 font-mon leading-[27.5px] max-w-[390px] text-[13px] text-white text-opacity-80">
                           {faq.content}
                         </Disclosure.Panel>
                       </Transition>
@@ -331,10 +329,11 @@ const Faqs = () => {
             </div>
           </div>
           <figure className="flex-1">
-            <img src="/images/faqs.svg" alt="Faqs" />
+            <img src="./images/faqs.svg" alt="Faqs" />
           </figure>
         </div>
-      </Container>
-    </div>
+      </Atom>
+      <div className="w-full h-[1px] bg-line"></div>
+    </>
   );
 };
