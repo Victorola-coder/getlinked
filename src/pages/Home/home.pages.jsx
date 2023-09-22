@@ -1,10 +1,17 @@
-import React from 'react'
-import Hero from './hero'
+import React from "react";
+import SEO from "../../components/seo";
 
 export default function Home() {
   return (
-  <main>
-    <Hero/>
-  </main>
-  )
+    <>
+      <SEO />
+      <Main>
+        <Hero />
+      </Main>
+    </>
+  );
 }
+
+const Hero = () => {
+  return <section></section>;
+};

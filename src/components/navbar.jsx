@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { navlinks } from "../../data/data";
+import { navlinks } from "../data/data";
 
 export default function Navbar() {
   const [opened, setOpened] = useState(false);
