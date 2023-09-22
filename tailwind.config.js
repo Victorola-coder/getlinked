@@ -19,8 +19,12 @@ export default {
       colors: {
         "dark-gray": "#150E28",
         "brand-purple-1": "#D434FE",
-        "navb": "rgba(255, 255, 255, 0.04)",
-        "line": "rgba(255, 255, 255, 0.18)",
+        navb: "rgba(255, 255, 255, 0.04)",
+        line: "rgba(255, 255, 255, 0.18)",
+      },
+      backgroundImage: {
+        "primary-gradient":
+          "linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)",
       },
     },
   },
