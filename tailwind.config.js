@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         mon: ["Montserrat", "sans-serif"],
-        inter:["Inter", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
         clash: ["clash", "sans-serif"],
         clashbold: ["clashBold", "sans-serif"],
       },
@@ -19,7 +19,8 @@ export default {
       colors: {
         "dark-gray": "#150E28",
         "brand-purple-1": "#D434FE",
-        "navb":"rgba(255, 255, 255, 0.04)"
+        "navb": "rgba(255, 255, 255, 0.04)",
+        "line": "rgba(255, 255, 255, 0.18)",
       },
     },
   },

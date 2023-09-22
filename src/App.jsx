@@ -1,14 +1,35 @@
-import { Route, Routes } from "react-router-dom";
-import { Navbar } from "./components/navbar";
+import {
+  Route,
+  Routes,
+  Outlet,
+  RouterProvider,
+  ScrollRestoration,
+} from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Root } from "postcss";
+
+const root = () => {
+  return (
+    <div>
+      <ScrollRestoration />
+      <Outlet />
+    </div>
+  );
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    elemment: <Root />,
+    children: [
+      {
+        index: true,
+        elemment: <Home />,
+      },
+    ],
+  },
+]);
 
 export default function App() {
-  return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route index path="/" element={<div>Home</div>} />
-        <Route path="*" element={<div>Not FOund</div>} />
-      </Routes>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
