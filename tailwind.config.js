@@ -23,6 +23,9 @@ export default {
         "brand-purple-1": "#D434FE",
         navb: "rgba(255, 255, 255, 0.04)",
         line: "rgba(255, 255, 255, 0.18)",
+        win: "rgba(212, 52, 254, 0.12)",
+        winn: "rgba(144, 58, 255, 0.12)",
+        partner: "gba(255, 255, 255, 0.01)",
       },
       backgroundImage: {
         "primary-gradient":

@@ -21,6 +21,8 @@ export default function Home() {
         <Judging />
         <Faqs />
         <Timeline />
+        <Prizes />
+        <Partners />
       </main>
     </>
   );
@@ -292,7 +294,8 @@ const Faqs = () => {
               <h1 className="relative z-2 text-[32px] font-clashbold font-bold">
                 Frequently Ask <span className="text-[#D434FE]">Question</span>
               </h1>
-              <p className="pt-2 font-mon leading-[27.5px] max-w-[342px] text-[14px]">
+
+              <p className="pt-2 font-mon mx-auto block lg:mx-0 leading-[27.5px] max-w-[342px] text-[14px]">
                 We got answers to the questions that you might want to ask about
                 getlinked Hackathon 1.0
               </p>
@@ -312,12 +315,12 @@ const Faqs = () => {
                           } transition text-[#D434FE]`}
                         >
                           {open ? (
-                            <span className="text-[#D434FE] font-mon text-[28px] font-normal leading-[27.5px]">
+                            <span className="text-[#D434FE] font-mon !text-[28px] font-normal leading-[27.5px]">
                               {" "}
                               -
                             </span>
                           ) : (
-                            <span className="text-[#D434FE] font-mon text-[20px] font-normal leading-[27.5px]">
+                            <span className="text-[#D434FE] font-mon !text-[20px] font-normal leading-[27.5px]">
                               {" "}
                               +
                             </span>
@@ -342,12 +345,218 @@ const Faqs = () => {
               ))}
             </div>
           </div>
-          <figure className="flex-1">
-            <img src="./images/faqs.svg" alt="Faqs" />
-          </figure>
+          <div className="flex gap-[24px] flex-col lg:flex-col items-center">
+            <div className="flex items-start space-x-16">
+              <h6 className="font-tom text-[#A866FD] lg:mt-10 text-[40px]  lg:text-[96px] font-medium leading-[27px] ">
+                ?
+              </h6>
+              <h4 className="font-tom text-[#D434FE] text-[64px]  lg:text-[128px] font-medium leading-[27px] ">
+                ?
+              </h4>
+              <h6 className="font-tom text-[#A866FD] text-[64px]  lg:mt-10 lg:text-[96px] font-medium leading-[27px] ">
+                ?
+              </h6>
+            </div>
+            <figure className="flex-1">
+              <img src="./images/faqs.svg" alt="Faqs" />
+            </figure>
+          </div>
         </div>
       </Atom>
       <div className="w-full h-[1px] bg-line"></div>
     </>
+  );
+};
+
+const Prizes = () => {
+  return (
+    <>
+      <Atom>
+        <div>
+          <h3 className="justify-left text-[20px] mx-auto md:mx-0 leading-[26.6px] text-center max-w-[249px] text-white font-clashbold md:leading-[27px] md:text-[22px] lg:leading-[1] font-semibold lg:text-[32px] md:max-w-[500px] md:text-left lg:max-w-[267px]">
+            Prizes and {""}
+            <span className="text-[#D434FE]">Rewards</span>
+          </h3>
+          <p className="text-xs mt-2 leading-[27.5px] max-w-[321px] text-center font-normal font-mon text-white md:mt-5 md:leading-[27.5px] md:text-sm md:text-left md:max-w-[401px]">
+            Highlight of the prizes or rewards for winners and for participants.
+          </p>
+        </div>
+      </Atom>
+      <Atom className="relative pb-10">
+        <img
+          src="./images/purple-lens-flare-left.svg"
+          alt="purple lens flare"
+          className="absolute pointer-events-none left-[-40px] sm:left-[-100px] sm:top-[-100px] mix-blend-hard-light"
+        />
+        <img
+          src="./images/purple-lens-flare-right.svg"
+          alt="purple lens flare"
+          className="absolute pointer-events-none bottom-[-50px] min-[425px]:bottom-[-200px] right-[-200px] min-[425px]:right-[-300px] lg:right-[-600px] lg:bottom-[-400px] mix-blend-hard-light"
+        />
+        {/* <header className="relative grid text-center text-white lg:hidden">
+          <h1 className="relative z-2 text-[32px] font-clashbold font-bold">
+            Prizes and{" "}
+          </h1>
+          <h1 className="text-[#D434FE] relative z-2 text-[32px] font-clashbold font-bold">
+            Rewards
+          </h1>
+          <p className="pt-2">
+            Highlight of the prizes or rewards for winners and for participants.
+          </p>
+        </header> */}
+        <div className="flex flex-col lg:flex-row gap-[37px]">
+          <figure className="relative grid place-items-center">
+            <img
+              src="./images/trophy.svg"
+              className="max-w-[400px] lg:max-w-max"
+              alt="Trophy"
+            />
+          </figure>
+          <div className="flex-1">
+            {/* <header className="relative hidden text-left text-white lg:block pl-14 pb-14">
+              <h1 className="relative z-2 text-[32px] font-clashbold font-bold">
+                Prizes and{" "}
+              </h1>
+              <h1 className="text-[#D434FE] relative z-2 text-[32px] font-clashbold font-bold">
+                Rewards
+              </h1>
+              <p className="pt-2">
+                Highlight of the prizes or rewards for winners and for
+                participants.
+              </p>
+            </header> */}
+            <section className="flex w-full gap-3 pt-20 mx-auto lg:gap-5 lg:pt-56 max-w-max lg:max-w-full lg:mx-auto-0">
+              <div className="flex flex-1  px-2 text-center bg-win border-[#D434FE] border-[1px] rounded-[8px] w-[90px] lg:w-[212px] h-[125px] pb-[22px] lg:h-[296px] relative">
+                <img
+                  src="./images/silver-medal.svg"
+                  alt="Silver medal"
+                  className="absolute top-[-45px] left-[50%] translate-x-[-50%]"
+                />
+                <div className="self-end w-full text-center text-white">
+                  <h3 className="font-bold text-[12px] lg:text-[32px]">2nd</h3>
+                  <h2 className="font-semibold text-[12px] lg:text-[24px]">
+                    Runner
+                  </h2>
+                  <h1 className="text-[14px] text-[#D434FE] font-bold lg:pt-2">
+                    N300,000
+                  </h1>
+                </div>
+              </div>
+              <div className="relative grid place-items-center max-w-max overflow-hidde bg-winn w-[125px] lg:w-[296px]">
+                <img
+                  src="./images/gold-medal.svg"
+                  alt="Gold medal"
+                  className="absolute top-[-60px] lg:top-[-40%] left-[50%] translate-x-[-50%] block"
+                />
+                <div className="flex px-2 text-center border-[#D434FE] border-[1px] rounded-[8px] w-[90px] lg:w-[212px] h-[147px] lg:h-[347px] pb-[22px]">
+                  <div className="self-end w-full text-center text-white">
+                    <h3 className="font-bold text-[12px] lg:text-[32px]">
+                      1st
+                    </h3>
+                    <h2 className="font-semibold text-[12px] lg:text-[24px]">
+                      Runner
+                    </h2>
+                    <h1 className="text-[14px] text-[#903AFF] font-bold lg:pt-2">
+                      N400,000
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-1 bg-win px-2 text-center border-[#D434FE] border-[1px] rounded-[8px] w-[90px] lg:w-[212px] h-[125px] lg:h-[296px] pb-[22px] relative">
+                <img
+                  src="/images/bronze-medal.svg"
+                  alt="Bronze medal"
+                  className="absolute top-[-45px] left-[50%] translate-x-[-50%]"
+                />
+                <div className="self-end w-full text-center text-white">
+                  <h3 className="font-bold text-[12px] lg:text-[32px]">3rd</h3>
+                  <h2 className="font-semibold text-[12px] lg:text-[24px]">
+                    Runner
+                  </h2>
+                  <h1 className="text-[14px] text-[#D434FE] font-bold lg:pt-2">
+                    N150,000
+                  </h1>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </Atom>
+      {/* <div className="w-full h-[1px] bg-line"></div> */}
+    </>
+  );
+};
+
+const Partners = () => {
+  return (
+    <div className="bg-[#110b20] py-[74px] border-b-[1px] border-b-[#FFFFFF2E]">
+      <Container className="relative py-20">
+        <img
+          src="/images/purple-lens-flare-left.svg"
+          alt="purple lens flare"
+          className="absolute pointer-events-none mix-blend-hard-light top-[-10%] left-[-40%] md:top-[-300px] md:left-[-400px]"
+        />
+        <img
+          src="/images/purple-lens-flare-right.svg"
+          alt="purple lens flare"
+          className="absolute pointer-events-none mix-blend-hard-light bottom-[-20%] right-[-50%] min-[480px]:bottom-[-400px] lg:right-[-600px]"
+        />
+        <header className="relative text-center text-white mb-14">
+          <h1 className="relative z-2 text-[32px] font-clashbold  font-bold">
+            Partners and Sponsors{" "}
+          </h1>
+          <p className="pt-2 text-[14px] font-mon mx-auto w-full max-w-[452px] ">
+            Getlinked Hackathon 1.0 is honored to have the following major
+            companies as its partners and sponsors
+          </p>
+        </header>
+        <div className="w-full max-w-[1255px] mx-auto py-20 lg:py-32 rounded-[2px] lg:rounded-[2px] border-[1px] bg-partner border-[#D434FE]">
+          <div className="w-full max-w-[240px] lg:max-w-[898px] mx-auto grid grid-cols-3 relative z-10">
+            <div className="p-5 grid place-items-center border-b-[2px] lg:border-b-[4px] border-[#D434FE] relative before:content-[''] before:w-[25px] before:h-[25px] lg:before:w-[50px] lg:before:h-[50px] before:absolute before:bottom-[-12.25px] before:right-[-12.25px] lg:before:bottom-[-25px] lg:before:right-[-25px] before:bg-[#110b20]">
+              <img
+                src="/images/liberty.svg"
+                alt="Liberty"
+                className="w-[30px] h-[30px] lg:w-auto lg:h-auto"
+              />
+            </div>
+            <div className="p-5 grid place-items-center border-b-[2px] lg:border-b-[4px] border-[#D434FE] border-l-[2px] lg:border-l-[4px]  border-r-[2px] lg:border-r-[4px]">
+              <img
+                src="/images/libertypay.svg"
+                alt="Liberty"
+                className="w-[56px] lg:w-auto lg:h-auto"
+              />
+            </div>
+            <div className="p-5 grid place-items-center border-b-[2px] lg:border-b-[4px] border-[#D434FE] relative before:content-[''] before:w-[25px] before:h-[25px] lg:before:w-[50px] lg:before:h-[50px] before:absolute before:bottom-[-12.25px] before:left-[-12.25px] lg:before:bottom-[-25px] lg:before:left-[-25px] before:bg-[#110b20]">
+              <img
+                src="./images/winwise.svg"
+                alt="Winwise"
+                className="w-[34px] h-[30px] lg:w-auto lg:h-auto"
+              />
+            </div>
+            <div className="grid p-5 place-items-center">
+              <img
+                src="/images/wisper.svg"
+                alt="Wisper"
+                className="w-[39px] lg:w-auto lg:h-auto"
+              />
+            </div>
+            <div className="p-5 grid place-items-center border-l-[2px] lg:border-l-[4px] border-r-[2px] lg:border-r-[4px] border-[#D434FE]">
+              <img
+                src="./images/paybox.svg"
+                alt="Paybox"
+                className="w-[54px] h-[30px] lg:w-auto lg:h-auto"
+              />
+            </div>
+            <div className="grid p-5 place-items-center">
+              <img
+                src="/images/vizual-plus.svg"
+                alt="Vizual Plus"
+                className="w-[69px] h-[30px] lg:w-auto lg:h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </Container>
+    </div>
   );
 };
