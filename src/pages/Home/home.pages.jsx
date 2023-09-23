@@ -383,17 +383,7 @@ const Prizes = () => {
           alt="purple lens flare"
           className="absolute pointer-events-none bottom-[-50px] min-[425px]:bottom-[-200px] right-[-200px] min-[425px]:right-[-300px] lg:right-[-600px] lg:bottom-[-400px] mix-blend-hard-light"
         />
-        {/* <header className="relative grid text-center text-white lg:hidden">
-          <h1 className="relative z-20 text-[32px] font-clashbold font-bold">
-            Prizes and{" "}
-          </h1>
-          <h1 className="text-[#D434FE] relative z-20 text-[32px] font-clashbold font-bold">
-            Rewards
-          </h1>
-          <p className="pt-2">
-            Highlight of the prizes or rewards for winners and for participants.
-          </p>
-        </header> */}
+
         <div className="flex flex-col lg:flex-row gap-[37px]">
           <figure className="relative grid place-items-center">
             <img
