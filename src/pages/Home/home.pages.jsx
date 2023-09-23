@@ -23,6 +23,7 @@ export default function Home() {
         <Timeline />
         <Prizes />
         <Partners />
+        <Policy />
       </main>
     </>
   );
@@ -46,7 +47,7 @@ const Hero = () => {
           alt="purple lens flare"
           className="hidden lg:block absolute pointer-events-none top-[-100px] left-[600px] mix-blend-hard-light"
         />
-        <h1 className="font-bold italic py-6 lg:text-[36px] font-mon text-white relative z-2 text-center lg:text-right">
+        <h1 className="font-bold italic py-6 lg:text-[36px] font-mon text-white relative z-20 text-center lg:text-right">
           Igniting a Revolution in{" "}
           <span className="relative">
             HR Innovation{" "}
@@ -66,7 +67,7 @@ const Hero = () => {
               draggable={false}
               className="w-[616px] h-[563px] lg:hidden absolute pointer-events-none top-[-8%] left-[-8%] mix-blend-hard-light"
             />
-            <div className="grid place-items-center text-center font-clashbold lg:text-left lg:block text-white text-[32px] lg:text-[80px] font-bold lg:leading-[98px] relative z-2">
+            <div className="grid place-items-center text-center font-clashbold lg:text-left lg:block text-white text-[32px] lg:text-[80px] font-bold lg:leading-[98px] relative z-20">
               <h1>getlinked Tech</h1>
               <h1>
                 Hackathon&nbsp;
@@ -87,16 +88,16 @@ const Hero = () => {
                 </span>
               </h1>
             </div>
-            <p className="text-[13px] lg:text-[20px] lg:mb-5 font-mon text-white text-center lg:text-left max-w-[264px] lg:max-w-[522px] relative z-2">
+            <p className="text-[13px] lg:text-[20px] lg:mb-5 font-mon text-white text-center lg:text-left max-w-[264px] lg:max-w-[522px] relative z-20">
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize
             </p>
-            <Link to="/register" className="relative z-2">
+            <Link to="/register" className="relative z-20">
               <Button className="text-base font-normal leading-normal font-mon">
                 Register
               </Button>
             </Link>
-            <div className="relative flex gap-4 pt-5 text-white lg:gap-6 z-2">
+            <div className="relative z-20 flex gap-4 pt-5 text-white lg:gap-6">
               <div className="flex">
                 <h1 className="font-uni text-[48px] lg:text-[64px]">00</h1>
                 <span className="text-[14px] font-mon pb-2 lg:pb-4 inline-block self-end mb-2">
@@ -221,7 +222,7 @@ const Judging = () => {
           <img
             src="/images/attributes.svg"
             alt="Judging Criteria Key attributes"
-            className="relative z-2"
+            className="relative z-20"
             draggable={false}
           />
           <img
@@ -291,7 +292,7 @@ const Faqs = () => {
         <div className="flex gap-[24px] pb-14 flex-col lg:flex-row">
           <div className="w-full lg:max-w-[427px] pt-24">
             <header className="relative grid text-center text-white pb-14 lg:block lg:text-left">
-              <h1 className="relative z-2 text-[32px] font-clashbold font-bold">
+              <h1 className="relative z-20 text-[32px] font-clashbold font-bold">
                 Frequently Ask <span className="text-[#D434FE]">Question</span>
               </h1>
 
@@ -371,22 +372,11 @@ const Faqs = () => {
 const Prizes = () => {
   return (
     <>
-      <Atom>
-        <div>
-          <h3 className="justify-left text-[20px] mx-auto md:mx-0 leading-[26.6px] text-center max-w-[249px] text-white font-clashbold md:leading-[27px] md:text-[22px] lg:leading-[1] font-semibold lg:text-[32px] md:max-w-[500px] md:text-left lg:max-w-[267px]">
-            Prizes and {""}
-            <span className="text-[#D434FE]">Rewards</span>
-          </h3>
-          <p className="text-xs mt-2 leading-[27.5px] max-w-[321px] text-center font-normal font-mon text-white md:mt-5 md:leading-[27.5px] md:text-sm md:text-left md:max-w-[401px]">
-            Highlight of the prizes or rewards for winners and for participants.
-          </p>
-        </div>
-      </Atom>
       <Atom className="relative pb-10">
         <img
           src="./images/purple-lens-flare-left.svg"
           alt="purple lens flare"
-          className="absolute pointer-events-none left-[-40px] sm:left-[-100px] sm:top-[-100px] mix-blend-hard-light"
+          className="absolute pointer-events-none overflow-hidden left-[-40px] sm:left-[-100px] sm:top-[-100px] mix-blend-hard-light"
         />
         <img
           src="./images/purple-lens-flare-right.svg"
@@ -394,10 +384,10 @@ const Prizes = () => {
           className="absolute pointer-events-none bottom-[-50px] min-[425px]:bottom-[-200px] right-[-200px] min-[425px]:right-[-300px] lg:right-[-600px] lg:bottom-[-400px] mix-blend-hard-light"
         />
         {/* <header className="relative grid text-center text-white lg:hidden">
-          <h1 className="relative z-2 text-[32px] font-clashbold font-bold">
+          <h1 className="relative z-20 text-[32px] font-clashbold font-bold">
             Prizes and{" "}
           </h1>
-          <h1 className="text-[#D434FE] relative z-2 text-[32px] font-clashbold font-bold">
+          <h1 className="text-[#D434FE] relative z-20 text-[32px] font-clashbold font-bold">
             Rewards
           </h1>
           <p className="pt-2">
@@ -412,19 +402,17 @@ const Prizes = () => {
               alt="Trophy"
             />
           </figure>
-          <div className="flex-1">
-            {/* <header className="relative hidden text-left text-white lg:block pl-14 pb-14">
-              <h1 className="relative z-2 text-[32px] font-clashbold font-bold">
-                Prizes and{" "}
-              </h1>
-              <h1 className="text-[#D434FE] relative z-2 text-[32px] font-clashbold font-bold">
-                Rewards
-              </h1>
-              <p className="pt-2">
+          <div className="">
+            <div className="flex flex-col items-right">
+              <h3 className="text-[20px] mx-auto md:mx-0 leading-[26.6px] text-center max-w-[249px] text-white font-clashbold md:leading-[27px] md:text-[22px] lg:leading-[1] font-semibold lg:text-[32px] md:max-w-[500px] md:text-right lg:max-w-[267px]">
+                Prizes and {""}
+                <span className="text-[#D434FE]">Rewards</span>
+              </h3>
+              <p className="text-xs mt-2 leading-[27.5px] max-w-[321px] text-center font-normal font-mon text-white md:mt-5 md:leading-[27.5px] md:text-sm md:text-right md:max-w-[401px]">
                 Highlight of the prizes or rewards for winners and for
                 participants.
               </p>
-            </header> */}
+            </div>
             <section className="flex w-full gap-3 pt-20 mx-auto lg:gap-5 lg:pt-56 max-w-max lg:max-w-full lg:mx-auto-0">
               <div className="flex flex-1  px-2 text-center bg-win border-[#D434FE] border-[1px] rounded-[8px] w-[90px] lg:w-[212px] h-[125px] pb-[22px] lg:h-[296px] relative">
                 <img
@@ -502,7 +490,7 @@ const Partners = () => {
           className="absolute pointer-events-none mix-blend-hard-light bottom-[-20%] right-[-50%] min-[480px]:bottom-[-400px] lg:right-[-600px]"
         />
         <header className="relative text-center text-white mb-14">
-          <h1 className="relative z-2 text-[32px] font-clashbold  font-bold">
+          <h1 className="relative z-20 text-[32px] font-clashbold  font-bold">
             Partners and Sponsors{" "}
           </h1>
           <p className="pt-2 text-[14px] font-mon mx-auto w-full max-w-[452px] ">
@@ -562,5 +550,91 @@ const Partners = () => {
 };
 
 const Policy = () => {
-  return <Atom></Atom>;
+  return (
+    <div className="bg-[#150e28] py-[74px]">
+      <Atom className="relative py-20">
+        <img
+          src="./images/purple-lens-flare-left.svg"
+          alt="purple lens flare"
+          className="absolute pointer-events-none mix-blend-hard-light top-[600px] min-[425px]:top-[500px] lg:top-0 lg:bottom-[-400px] left-[-20%]"
+        />
+        <div className="grid lg:grid-cols-2 gap-[50px]">
+          <section>
+            <header className="relative text-white mb-14">
+              <h1 className="relative z-20 text-[32px] font-clashbold font-bold">
+                Privacy Policy and{" "}
+              </h1>
+              <h1 className="relative z-20 text-[32px] text-[#D434FE] font-clashbold font-bold">
+                Terms{" "}
+              </h1>
+              <p className="pt-4 text-[14px] text-[#FFFFFFBF]">
+                Last updated on September 12, 2023{" "}
+              </p>
+              <p className="pt-8 text-[14px]">
+                Below are our privacy & policy, which outline a lot of goodies.
+                it&rsquo;s our aim to always take of our participant
+              </p>
+            </header>
+            <div className="border-[1px] border-[#D434FE] w-full max-w-[569px] mx-auto py-[59px] rounded-[5px]">
+              <p className="text-white text-[14px] px-[15px] lg:px-[72px] leading-[30px] pb-[24px]">
+                At getlinked tech Hackathon 1.0, we value your privacy and are
+                committed to protecting your personal information. This Privacy
+                Policy outlines how we collect, use, disclose, and safeguard
+                your data when you participate in our tech hackathon event. By
+                participating in our event, you consent to the practices
+                described in this policy.
+              </p>
+              <div className="pl-[22px] lg:pl-[72px] pr-[22px] lg:pr-[39px] relative z-20">
+                <h1 className="relative font-bold z-20 text-[#D434FE] font-clashdisplay">
+                  Licensing Policy{" "}
+                </h1>
+                <p className="text-white font-bold leading-[30px]">
+                  Here are terms of our Standard License:
+                </p>
+                <ul className="flex flex-col gap-4 pt-5 pb-6">
+                  <li className="flex gap-4">
+                    <img
+                      src="./icons/checked.svg"
+                      alt="Checked"
+                      className="w-[17px] h-[17px] mt-2"
+                    />
+                    <p className="text-white text-[14px] leading-[30px]">
+                      The Standard License grants you a non-exclusive right to
+                      navigate and register for our event
+                    </p>
+                  </li>
+                  <li className="flex gap-4">
+                    <img
+                      src="./icons/checked.svg"
+                      alt="Checked"
+                      className="w-[17px] h-[17px] mt-2"
+                    />
+                    <p className="text-white text-[14px] leading-[30px]">
+                      You are licensed to use the item available at any free
+                      source sites, for your project developement
+                    </p>
+                  </li>
+                </ul>
+                <Button className="mx-auto">Read More</Button>
+              </div>
+            </div>
+          </section>
+          <section>
+            <figure className="relative grid h-full place-items-center">
+              <img
+                src="./images/privacy.svg"
+                alt="Privacy"
+                className="lg:self-end"
+              />
+              <img
+                src="./images/safeguard.svg"
+                alt="Safeguard"
+                className="absolute top-0"
+              />
+            </figure>
+          </section>
+        </div>
+      </Atom>
+    </div>
+  );
 };

@@ -92,7 +92,7 @@ export default function Navbar() {
                 <div
                   ref={headerRef}
                   // onClick={() => setOpened(!opened)}
-                  className={`h-[] absolute bg-[#150E28] rounded-lg pb-6 border-[1px] border-solid border-navb block mx-[30px] mt-[100px] md:hidden z-10 transition-all duration-300 ${
+                  className={`z-[100] h-[] absolute bg-[#150E28] rounded-lg pb-6 border-[1px] border-solid border-navb block mx-[30px] mt-[100px] md:hidden  transition-all duration-300 ${
                     opened ? "-translate-y-[90px]" : "-translate-y-[180%]"
                   } pt-4 left-0 right-0`}
                 >

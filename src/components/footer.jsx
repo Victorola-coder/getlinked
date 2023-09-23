@@ -10,8 +10,9 @@ export default function Footer() {
           <div className="w-full max-w-[412px]">
             <Link to="/">
               <img
-                src="/getlinked.svg"
+                src="./getlinked.svg"
                 alt="GetLinked logo"
+                draggable={false}
                 className="w-[72px] h-[18px] lg:w-[171px] lg:h-[44px]"
               />
             </Link>
@@ -22,20 +23,20 @@ export default function Footer() {
             </p>
             <div className="flex gap-2 text-white text-[12px] pt-16">
               <p>Terms of Use</p>
-              <div className="h-[17px] rounded-[2px] w-[2px] bg-primary"></div>
+              <div className="h-[17px] rounded-[2px] w-[2px] bg-[#D434FE]"></div>
               <p>Privacy Policy</p>
             </div>
           </div>
           <div className="flex flex-wrap justify-between gap-x-2 gap-y-10 w-full max-w-[500px]">
             <div className="flex flex-col gap-[15px]">
-              <h1 className="text-[14px] font-semibold text-primary">
+              <h1 className="text-[14px] font-semibold text-[#D434FE]">
                 Useful Links
               </h1>
               <p className="text-white text-[12px]">Overview</p>
               <p className="text-white text-[12px]">Timeline</p>
               <p className="text-white text-[12px]">FAQs</p>
               <p className="text-white text-[12px]">Register</p>
-              <div className="text-primary text-[12px] flex gap-2 item items-center">
+              <div className="text-[#D434FE] text-[12px] flex gap-2 item items-center">
                 Follow us{" "}
                 <div className="flex items-center gap-4">
                   {socialLinks.map((data) => (
@@ -47,12 +48,12 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-col gap-[22px]">
-              <h1 className="text-[14px] font-semibold text-primary">
+              <h1 className="text-[14px] font-semibold text-[#D434FE]">
                 Contact Us
               </h1>
               <div className="flex gap-4 text-white items-center text-[12px]">
                 <img
-                  src="/icons/phone.svg"
+                  src="./icons/phone.svg"
                   alt="contact"
                   className="w-[12px] h-[12px] self start"
                 />
@@ -60,7 +61,7 @@ export default function Footer() {
               </div>
               <div className="flex gap-4 text-white text-[12px]">
                 <img
-                  src="/icons/location.svg"
+                  src="./icons/location.svg"
                   alt="contact"
                   className="w-[12px] h-[12px] self start"
                 />

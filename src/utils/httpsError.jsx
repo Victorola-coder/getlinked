@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 export default class HttpErrorException extends Error {
   constructor(error) {
     super();

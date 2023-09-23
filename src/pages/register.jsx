@@ -17,12 +17,12 @@ export default function Register() {
         title="Register"
         description="Registration Page for GetLinked Pre Hackathon Project"
       />
-      <div className="bg-bgdark min-h-[100vh] overflow-hidden">
+      <div className="bg-[] min-h-[100vh] overflow-hidden">
         <div className="hidden lg:block"></div>
         <Container>
           <div className="grid justify-between gap-10 py-10 lg:py-20 lg:grid-cols-2">
             <figure className="hidden lg:block">
-              <img src="/images/graphic-designer.svg" alt="" className="" />
+              <img src="./images/graphic-designer.svg" alt="" className="" />
             </figure>
             <RegisterForm />
           </div>
@@ -63,6 +63,8 @@ const RegisterForm = () => {
     { id: nanoid(), name: "20" },
   ];
   const [selectedGroups, setSelectedGroups] = useState(null);
+
+  const notify = (error) => toast.error(error, { toastId: 0 });
 
   function closeModal() {
     setIsOpen(false);
@@ -106,15 +108,15 @@ const RegisterForm = () => {
       !selectedGroups?.name ||
       !selectedCategory?.id
     ) {
-      return toast.error("All form inputs are required!");
+      return notify("All form inputs are required!");
     }
 
     if (!checked) {
-      return toast.error("Accept our terms and conditions");
+      return notify("Accept our terms and conditions");
     }
 
     if (!validator.isEmail(formData.email)) {
-      return toast.error("Invalid email!");
+      return notify("Invalid email!");
     }
 
     const payload = {
@@ -150,10 +152,10 @@ const RegisterForm = () => {
 
   return (
     <>
-      <div className="w-full lg:max-w-[740px] pt-0 pb-16 lg:py-16 lg:px-6 rounded-lg lg:bg-[#ffffff08] lg:shadow-[0px_4px_4px_0px] #00000040] relative col-span-2 lg:col-start-2">
+      <div className="w-full lg:max-w-[740px] pt-0 pb-16 lg:py-16 lg:px-6 rounded-[12px] lg:bg-[#ffffff08] lg:shadow-reg [#00000040] relative col-span-2 lg:col-start-2">
         <div className="w-full max-w-[558px] mx-auto">
           <header className="relative z-10 mb-5">
-            <h1 className="text-primary font-[ClashDisplay] text-[32px] mb-8 font-semibold">
+            <h1 className="text-[#D434FE] font-clashbold text-[32px] mb-8 font-semibold">
               Register
             </h1>
             <figure className="block mb-5 lg:hidden ">
@@ -163,19 +165,19 @@ const RegisterForm = () => {
                 className="relative z-10 max-w-[195px] max-h-[155px] mx-auto"
               />
             </figure>
-            <div className="flex mb-8 text-white">
+            <div className="flex mb-8 text-white font-mon">
               <p className="self-end -mb-[7px]">
                 Be part of this movement! &nbsp;
               </p>
-              <span className="border-b-[1px] w-[101px] inline-block border-b-primary border-dashed ">
+              <span className="border-b-[1px] w-[101px] inline-block border-b-[#D434FE] border-dashed ">
                 <div className="flex justify-center">
                   <img
-                    src="/icons/emoji-female.svg"
+                    src="./icons/emoji-female.svg"
                     alt="Female emoji"
                     className="inline-block"
                   />
                   <img
-                    src="/icons/emoji-male.svg"
+                    src="./icons/emoji-male.svg"
                     alt="Male emoji"
                     className="inline-block"
                   />
@@ -202,7 +204,7 @@ const RegisterForm = () => {
                   value={formData.team_name}
                   onChange={formDataHandler}
                   placeholder="Enter the name of the group"
-                  className="placeholder-[#FFFFFF40] text-[14px]"
+                  className="placeholder:text-[#FFFFFF40] text-[14px]"
                 />
               </fieldset>
               <fieldset>
@@ -211,10 +213,11 @@ const RegisterForm = () => {
                 </label>
                 <Input
                   name="phone_number"
+                  type="number"
                   value={formData.phone_number}
                   onChange={formDataHandler}
                   placeholder="Enter your phone number"
-                  className="placeholder-[#FFFFFF40] text-[14px]"
+                  className="placeholder:text-[#FFFFFF40] text-[14px]"
                 />
               </fieldset>
               <fieldset>
@@ -226,7 +229,7 @@ const RegisterForm = () => {
                   value={formData.email}
                   onChange={formDataHandler}
                   placeholder="Enter your email address"
-                  className="placeholder-[#FFFFFF40] text-[14px]"
+                  className="placeholder:text-[#FFFFFF40] text-[14px]"
                 />
               </fieldset>
               <fieldset>
@@ -238,7 +241,7 @@ const RegisterForm = () => {
                   value={formData.project_topic}
                   onChange={formDataHandler}
                   placeholder="What is your group project topic"
-                  className="placeholder-[#FFFFFF40] text-[14px]"
+                  className="placeholder:text-[#FFFFFF40] text-[14px]"
                 />
               </fieldset>
             </div>
@@ -280,13 +283,13 @@ const RegisterForm = () => {
                         leaveFrom="transform scale-100 opacity-100"
                         leaveTo="transform scale-95 opacity-0"
                       >
-                        <Listbox.Options className="absolute z-10 bg-white w-full rounded-md mt-2 overflow-x-hidden max-h-[150px] custom-scroll-bar">
+                        <Listbox.Options className="absolute z-10 text-black/80 bg-white w-full rounded-md mt-2 overflow-x-hidden max-h-[150px] custom-scroll-bar">
                           {category?.map((person) => (
                             <Listbox.Option
                               key={person.id}
                               value={person}
                               disabled={person.unavailable}
-                              className="py-[8px] px-6 cursor-pointer hover:bg-primary hover:bg-opacity-70 text-[14px] border-b-[1px] border-b-[#ccc]"
+                              className="py-[8px] px-6 cursor-pointer hover:bg-[#D434FE]/60 hover:bg-opacity-70 text-[14px] border-b-[1px] border-b-[#ccc]"
                             >
                               {person.name}
                             </Listbox.Option>
@@ -332,12 +335,12 @@ const RegisterForm = () => {
                         leaveFrom="transform scale-100 opacity-100"
                         leaveTo="transform scale-95 opacity-0"
                       >
-                        <Listbox.Options className="z-10 absolute bg-white w-full rounded-md mt-2 overflow-x-hidden max-h-[150px] overflow-y-auto custom-scroll-bar">
+                        <Listbox.Options className="z-10 absolute text-black/80 bg-white w-full rounded-md mt-2 overflow-x-hidden max-h-[150px] overflow-y-auto custom-scroll-bar">
                           {groups.map((group) => (
                             <Listbox.Option
                               key={group.id}
                               value={group}
-                              className="py-[8px] px-6 cursor-pointer hover:bg-primary hover:bg-opacity-70 text-[14px] border-b-[1px] border-b-[#ccc]"
+                              className="py-[8px] px-6 cursor-pointer hover:bg-[#D434FE]/60 hover:bg-opacity-70 text-[14px] border-b-[1px] border-b-[#ccc]"
                             >
                               {group.name}
                             </Listbox.Option>
@@ -355,7 +358,7 @@ const RegisterForm = () => {
               </p>
               <div className="flex items-center gap-3">
                 <Checkbox checked={checked} setChecked={setChecked} />
-                <p className="relative text-white z-2">
+                <p className="relative text-white z-20">
                   I agreed with the event terms and conditions and privacy
                   policy
                 </p>
@@ -405,7 +408,7 @@ const RegisterForm = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-[669px] transform overflow-hidden rounded-2xl bg-transparent border-[1px] border-primary px-6 pt-4 pb-8 lg:pb-16 lg:px-12 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-[669px] transform overflow-hidden rounded-2xl bg-transparent border-[1px] border-[#D434FE] px-6 pt-4 pb-8 lg:pb-16 lg:px-12 text-left align-middle shadow-xl transition-all">
                   <header className="grid gap-4 text-center place-items-center">
                     <img
                       src="/images/congratulation.svg"
