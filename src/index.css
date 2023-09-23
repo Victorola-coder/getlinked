@@ -60,6 +60,10 @@ html {
   src: url("./assets/fonts/tommy/TommyOutline.otf") format("opentype");
 }
 
+.timeline-gradient-circle {
+  background: linear-gradient(270deg, #903aff 0%, #d434fe 100%);
+}
+
 html.lenis {
   height: auto;
 }
