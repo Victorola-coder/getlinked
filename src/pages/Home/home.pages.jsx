@@ -549,7 +549,7 @@ const Partners = () => {
             </div>
             <div className="grid p-5 place-items-center">
               <img
-                src="/images/vizual-plus.svg"
+                src="./images/vizual-plus.svg"
                 alt="Vizual Plus"
                 className="w-[69px] h-[30px] lg:w-auto lg:h-auto"
               />
@@ -559,4 +559,8 @@ const Partners = () => {
       </Container>
     </div>
   );
+};
+
+const Policy = () => {
+  return <Atom></Atom>;
 };

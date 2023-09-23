@@ -55,7 +55,7 @@ export default function Navbar() {
               ))}
             </ul>
             <div className="hidden md:block">
-              <Link to="/login">
+              <Link to="/register">
                 <div className="font-mon text-base bg-[linear-gradient(270deg,_#903aff,_#d434fe_56.42%,_#ff26b9_99.99%,_#fe34b9)] rounded-md py-2.5 px-[30px] lg:py-4 lg:px-[52px] transition-all duration-300 shadow-md  active:scale-90 hover:scale-105">
                   Register
                 </div>
