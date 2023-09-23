@@ -49,7 +49,7 @@ export const TimelineRight = ({ title, content, index, date, end }) => {
         <h1 className="text-[#D434FE] font-mon  text-[24px] font-bold mb-2">
           {title}
         </h1>
-        <p className="text-[14px] font-mon max-w-[488px] ml-0 mx-auto text-white">
+        <p className="text-[14px] font-mon max-w-[488px] ml-0 mx-auto  text-white">
           {content}
         </p>
       </div>
