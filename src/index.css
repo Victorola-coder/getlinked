@@ -19,11 +19,11 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #140d27;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body::-webkit-scrollbar {
-  @apply w-0 bg-transparent;
+  @apply w-1 bg-transparent;
 }
 
 body::-webkit-scrollbar-corner {
@@ -54,6 +54,10 @@ html {
 @font-face {
   font-family: clashBold;
   src: url("./assets/fonts/clash/ClashDisplay-Semibold.otf") format("opentype");
+}
+@font-face {
+  font-family: TommyOutline;
+  src: url("./assets/fonts/tommy/TommyOutline.otf") format("opentype");
 }
 
 html.lenis {

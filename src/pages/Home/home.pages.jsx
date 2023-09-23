@@ -4,6 +4,7 @@ import { Atom, Button, Container } from "../../components";
 import { Disclosure, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { faqsData } from "../../data/data";
+import Timeline from "./timeline";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Rules />
         <Judging />
         <Faqs />
+        <Timeline />
       </main>
     </>
   );
@@ -66,7 +68,7 @@ const Hero = () => {
               <h1>getlinked Tech</h1>
               <h1>
                 Hackathon&nbsp;
-                <span className="relative text-[#D434FE] inline-block text-[#D434FE]">
+                <span className="relative text-[#D434FE] inline-block">
                   1.0
                   <img
                     src="/icons/chain.svg"
@@ -212,7 +214,7 @@ const Rules = () => {
 const Judging = () => {
   return (
     <>
-      <Atom className={`pb-3 md:p-10`}>
+      <Atom className={`md:items-start pb-3 md:p-10`}>
         <figure className="relative flex items-center">
           <img
             src="/images/attributes.svg"
@@ -227,7 +229,7 @@ const Judging = () => {
           />
         </figure>
         <div className="mt-12 md:mt-0">
-          <h3 className="text-[20px] mx-auto md:mx-0 leading-[26.6px] text-center max-w-[249px] text-white font-clashbold md:leading-[27px] md:text-[22px] font-semibold lg:text-[32px] md:max-w-[500px] md:text-left lg:max-w-[267px]">
+          <h3 className="text-[20px] mx-auto md:mx-0 leading-[26.6px] text-center max-w-[249px] text-white font-clashbold md:leading-[27px] md:text-[22px] lg:leading-[1] font-semibold lg:text-[32px] md:max-w-[500px] md:text-left lg:max-w-[267px]">
             Judging Criteria{" "}
             <span className="text-[#D434FE]">Key attributes</span>
           </h3>
@@ -270,7 +272,9 @@ const Judging = () => {
             of the hackathon, including deadlines, use of specific technologies
             or APIs, and any other competition-specific requirements.
           </p>
-          <Button className="mt-12">Read More</Button>
+          <Button className="block mx-auto md:mx-0 mt-2 w-[172px] md:mt-12 text-[12px] font-mon ">
+            Read More
+          </Button>
         </div>
       </Atom>
       <div className="w-full h-[1px] bg-line"></div>
@@ -303,11 +307,21 @@ const Faqs = () => {
                           {faq.title}
                         </span>
                         <span
-                          className={`material-icons self-end ${
+                          className={`self-end  ${
                             open ? "rotate-180" : "-rotate-180"
                           } transition text-[#D434FE]`}
                         >
-                          {open ? "remove" : "add"}
+                          {open ? (
+                            <span className="text-[#D434FE] font-mon text-[28px] font-normal leading-[27.5px]">
+                              {" "}
+                              -
+                            </span>
+                          ) : (
+                            <span className="text-[#D434FE] font-mon text-[20px] font-normal leading-[27.5px]">
+                              {" "}
+                              +
+                            </span>
+                          )}
                         </span>
                       </Disclosure.Button>
                       <Transition

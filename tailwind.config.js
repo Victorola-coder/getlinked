@@ -9,6 +9,7 @@ export default {
         clash: ["clash", "sans-serif"],
         clashbold: ["clashBold", "sans-serif"],
         uni: ["Unica One", "cursive"],
+        tom: ["TommyOutline", "sans-serif"],
       },
       screens: {
         sm: "576px",
