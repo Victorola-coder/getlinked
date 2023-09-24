@@ -372,7 +372,7 @@ const Faqs = () => {
 const Prizes = () => {
   return (
     <>
-      <Atom className="relative pb-10">
+      <Atom className="pb-10 mr-10">
         <img
           src="./images/purple-lens-flare-left.svg"
           alt="purple lens flare"
@@ -384,21 +384,21 @@ const Prizes = () => {
           className="absolute pointer-events-none bottom-[-50px] min-[425px]:bottom-[-200px] right-[-200px] min-[425px]:right-[-300px] lg:right-[-600px] lg:bottom-[-400px] mix-blend-hard-light"
         />
 
-        <div className="flex flex-col lg:flex-row gap-[37px]">
+        <div className="flex flex-col lg:items-center lg:flex lg:flex-row gap-[37px]">
           <figure className="relative grid place-items-center">
             <img
               src="./images/trophy.svg"
-              className="max-w-[400px] lg:max-w-max"
+              className="object-cover"
               alt="Trophy"
             />
           </figure>
           <div className="">
-            <div className="flex flex-col items-right">
-              <h3 className="text-[20px] mx-auto md:mx-0 leading-[26.6px] text-center max-w-[249px] text-white font-clashbold md:leading-[27px] md:text-[22px] lg:leading-[1] font-semibold lg:text-[32px] md:max-w-[500px] md:text-right lg:max-w-[267px]">
+            <div className="flex flex-col">
+              <h3 className="text-[20px] mx-auto md:mx-0 leading-[26.6px] text-center max-w-[249px] text-white font-clashbold md:leading-[27px] md:text-[22px] lg:leading-[1] font-semibold lg:text-[32px] md:max-w-[500px] md:text-left lg:max-w-[267px]">
                 Prizes and {""}
                 <span className="text-[#D434FE]">Rewards</span>
               </h3>
-              <p className="text-xs mt-2 leading-[27.5px] max-w-[321px] text-center font-normal font-mon text-white md:mt-5 md:leading-[27.5px] md:text-sm md:text-right md:max-w-[401px]">
+              <p className="text-xs mt-2 leading-[27.5px] max-w-[321px] text-center font-normal font-mon text-white md:mt-5 md:leading-[27.5px] md:text-sm md:text-left md:max-w-[401px]">
                 Highlight of the prizes or rewards for winners and for
                 participants.
               </p>

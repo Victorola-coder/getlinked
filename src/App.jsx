@@ -15,8 +15,8 @@ export default function App() {
       <Routes>
         <Route path="*" element={<Error />} />
         <Route index path="/" element={<Home />} />
-        <Route index path="/register" element={<Register />} />
-        <Route index path="/contact" element={<Contact />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>
