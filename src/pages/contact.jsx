@@ -97,7 +97,7 @@ const ContactForm = () => {
     message: "",
   });
 
-  const notify = (error) => notify(error, { toastId: 0 });
+  const notify = (error) => toast.error(error, { toastId: 0 });
 
   const formDataHandler = (e) => {
     setFormData((prev) => ({
